@@ -88,6 +88,8 @@ body{
     border-radius: 10px;
     opacity: 0;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    border: 2px solid #8a64ff7a;
+
 }
 
 /* Classe que torna os botões visíveis */
@@ -698,4 +700,5 @@ a{
     width: 0px;
     height: 0px;
     background: transparent; /* Adicionado para garantir a ocultação em alguns casos */
+
 }
