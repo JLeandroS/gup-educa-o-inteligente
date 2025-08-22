@@ -120,6 +120,34 @@
 }
 </style>
 <body>
+    <div class="msgUser" id="msgUserError" style="background: rgb(255, 255, 255); border-radius: 20px; padding: 5px; animation: 0.9s ease 0s 1 normal forwards running c_notificar; display: none;">
+            <div class="msg_dados">
+                <span class="material-symbols-outlined" style="    font-size: x-large;
+                    margin: 0;
+                    background: #8a2be2;
+                    border-radius: 50%;
+                    color: rgb(255 255 255);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 4px;">
+                    notifications
+                </span>
+                <div class="msg_dados" style="padding: 0 10px;flex-direction:column;width: -webkit-fill-available;justify-content: flex-start;">
+                    <h6 id="tipoMsgError" style="padding:0;margin: 0px;width: -webkit-fill-available;color: blueviolet">Informativo</h6>
+                    <h6 id="msgTextError" style="padding:0;margin: 0px;width: -webkit-fill-available;color: #183471;">Preencha todos os campos obrigatórios.</h6>
+                </div>
+                <span class="material-symbols-outlined" 
+                    style="font-size: xx-large;
+                    margin: 0;
+                    background:rgb(255, 255, 255);
+                    border-radius: 50%;
+                    color: #183471;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;">report</span>
+            </div>
+    </div>
     <div class="top">
         <span id="btn_menu" style="position: absolute;top: 0px;left: 0px;" class="material-symbols-outlined">menu</span>
         <span id="btn_menu_close" style="position: absolute;top: 0px;left: 0px;display:none;" class="material-symbols-outlined">close</span>
@@ -584,6 +612,7 @@
     <script src="java/javascript.js"></script>
 </body>
 </html>
+
 
 
 
