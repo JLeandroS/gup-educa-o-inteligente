@@ -178,7 +178,7 @@ function removeStyle() {
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.1 // ANTES: Provavelmente 0.4 ou 0.5. DEPOIS: 0.1 ou 0.05
+    threshold: 0 // ANTES: Provavelmente 0.4 ou 0.5. DEPOIS: 0.1 ou 0.05
 };
 
 // Se quiser que dispare assim que 1 pixel entrar na tela, você pode até usar 0.
@@ -284,4 +284,5 @@ const phoneMask = (value) => {
 // window.addEventListener('scroll', function() {
 //   console.log(Math.round(window.scrollY));
 // });
+
 
