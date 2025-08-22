@@ -281,8 +281,25 @@ const phoneMask = (value) => {
   return value
 }
 
+document.getElementById("celular").addEventListener("input", function(event){
+
+  //busca conteúdo do input
+    var celular = document.getElementById("celular").value;
+    var nome = document.getElementById("nome").value;
+
+    //valida conteudo do input 
+    if (celular !== null && conteudo !== '' && nome !== null && nome !== '') {
+      //habilita o botão
+      document.getElementById("cad_lead").disabled = false;
+    } else {
+      //desabilita o botão se o conteúdo do input ficar em branco
+      document.getElementById("cad_lead").disabled = true;
+    }
+});
+
 // window.addEventListener('scroll', function() {
 //   console.log(Math.round(window.scrollY));
 // });
+
 
 
