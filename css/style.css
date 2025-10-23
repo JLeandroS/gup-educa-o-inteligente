@@ -140,6 +140,7 @@ body{
     transition: opacity 0.3s ease, visibility 0.3s ease;
     border: 2px solid #8a64ff7a;
     height: auto;
+
 }
 
 /* Classe que torna os botões visíveis */
@@ -756,7 +757,6 @@ a{
     .direction{
     flex-direction: column;
     }
-
 }
 @media (max-width:650px) {
     .card-metricas{
@@ -1027,3 +1027,120 @@ a{
     background:#24411e;
 }
 
+.chat{
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    height: 70%;
+    width: 25%;
+    border: 1px solid #1c2a18;
+    border-radius: 10px;
+    background: #121212;
+    z-index: 10;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    animation: ample 0.2s ease-in-out;
+}
+.top_chat{
+    display: flex;
+    align-items: center;
+    background: darkslategrey;
+    padding: 0 12px;
+    color: aliceblue;
+    border-radius: 10px 10px 1px 1px;
+    justify-content: space-between;
+}
+.status_server{
+    border-radius: 50%;
+    width: 15px;
+    min-width: 15px;
+    height: 15px;
+    background: yellowgreen;
+    border: 2px solid aliceblue;
+    margin: 10px;
+    box-shadow: 0 0 13px 0 #9acd32;
+}
+.content_chat{
+    height: 77%;
+    width: 100%;
+    max-height: 77%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.user_chat{
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px;
+    margin-top: 0;
+}
+.card_msg{
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+}
+.card_msg p{
+    max-width: 100%;
+    font-family: Roboto, sans-serif;
+    border-radius: 3px 10px 10px 10px;
+    margin: 0;
+    background: #22243b;
+    color: aliceblue;
+    padding: 12px;
+    margin: 0 19px 2px 2px;
+}
+
+.content_input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.content_input textarea{
+    font-family: Roboto, sans-serif;
+    width: 100%;
+    resize: none;
+    background: #212020;
+    border-radius: 10px;
+    height: 100%;
+    font-size: 1rem;
+    padding: 0 10px 0px 10px;
+    color: #83ff00;
+    text-shadow: 0 0 4px #83ff00;
+}
+.content_input .material-symbols-outlined{
+    margin: 0;
+    font-size: 2rem;
+    color: #212020;
+    margin: 0 5px;
+}
+.btn-close{
+    border-radius: 50%;
+    padding: 3px;
+    display: flex;
+    background: cadetblue;
+    color: aliceblue;
+}
+.btn-close .material-symbols-outlined{
+    margin: 0;
+}
+@keyframes ample {
+    from{
+        transform: scale(0.5);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@media (max-width:830px) {
+    .chat{
+        width: calc(100% - 2rem);
+    }
+}
