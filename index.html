@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Goldman:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -137,7 +137,7 @@
                     <h6 id="tipoMsgError" style="padding:0;margin: 0px;width: -webkit-fill-available;color: blueviolet">Informativo</h6>
                     <h6 id="msgTextError" style="padding:0;margin: 0px;width: -webkit-fill-available;color: #183471;">Preencha todos os campos obrigatórios.</h6>
                 </div>
-                <span class="material-symbols-outlined" 
+                <span id="iconMsg" class="material-symbols-outlined" 
                     style="font-size: xx-large;
                     margin: 0;
                     background:rgb(255, 255, 255);
@@ -161,22 +161,8 @@
             <a href="#Contrate-me"><button id="btn_contact" data-target="contato" class="btn_top"><span style="font-size: large;margin-right: 10px;" class="material-symbols-outlined">support_agent</span>Contato</button></a>
         </nav>
         </div>
-    <a href="https://api.whatsapp.com/send?phone=559184271612" target="_blank"><div style="display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    border: 3px solid;
-    border-radius: 50%;
-    width: 28px;
-    height: 28px;
-    background: #4faa00;
-    color: #ffffff;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    z-index: 10;
-    box-shadow: 0 0 4px 2px #000000b3;">
-        <span style="color: aliceblue;margin: 0;" class="material-symbols-outlined">phone_enabled</span>
+    <a href="https://api.whatsapp.com/send?phone=559184271612" target="_blank"><div class="balao_wpp">
+        <span style="color: rgb(0, 0, 0);margin: 0;" class="material-symbols-outlined">chat_bubble</span>
     </div></a>
         <div class="menu_modal" id="menu_modal" style="transform: translateX(100%);position:fixed;top:67px;z-index: 13;background: #1e1e1ee3;">
             <a href="#inicio"><button class="btn_top"><span style="margin-right: 10px;" class="material-symbols-outlined">home</span>Início</button></a>
@@ -190,12 +176,10 @@
             </div>
             <section id="home">
             <div class="info" id="inicio">
-                <a href="#cursos"><div class="c_card">
+                
                     <div class="contente_info">
                         <div class="dados">
-                            <!-- <strong style="font-size: 16vw;color: rgb(118 181 0);text-shadow: 0 0 7px rgb(118 181 0);font-family: Goldman, sans-serif;animation: 0.4s ease 0s 1 normal none running move_text;">GUP</strong>
-                             -->
-                            <!-- <img src="img/GUP_name.svg" alt="" style="width: 65vh;max-width: 90vw;"> -->
+                            <span class="material-symbols-outlined" style="animation: shake 2s infinite linear;margin: 0;color: #69f849;font-size: 5rem;">school</span>
                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 1736 754" style="width: 65vh; max-width: 90vw;animation:move_text 1s ;">
                                 <path class="logoPath" style="animation-delay: 0.1s;" d="M0 0 C0.82806152 0.40444336 1.65612305 0.80888672 2.50927734 1.22558594 C20.25849444 9.99299331 36.65526372 20.49039544 52 33 C52.82612793 33.67168213 52.82612793 33.67168213 53.66894531 34.35693359 C66.60256884 44.95808314 79.05448926 56.49571226 89 70 C85.00655708 74.93925835 80.73184332 79.14837354 75.97265625 83.34765625 C72.42854314 86.5098807 68.96367206 89.75023643 65.5 93 C61.36674352 96.87207933 57.22398688 100.72657172 53 104.5 C48.7983304 108.25423723 44.67649765 112.0879297 40.5625 115.9375 C39.91700195 116.53884766 39.27150391 117.14019531 38.60644531 117.75976562 C35.71151465 120.45701513 32.82581044 123.16058506 29.98046875 125.91015625 C18.12773608 137.15244775 5.39653051 142.98180185 -11 143 C-26.48120833 142.09514723 -38.6145776 137.35347666 -51.1484375 128.625 C-72.73528539 113.68280207 -98.09106352 105.32216759 -124 102 C-124.98355469 101.86851562 -125.96710938 101.73703125 -126.98046875 101.6015625 C-167.50817726 97.2739284 -214.17658888 105.55698395 -247.0625 131 C-249.06265604 132.64141838 -251.04252933 134.30790454 -253 136 C-253.50289551 136.42216797 -254.00579102 136.84433594 -254.52392578 137.27929688 C-285.34025513 163.22783631 -299.6767108 202.25321622 -303.46484375 241.43359375 C-303.72826209 244.95906936 -303.90124971 248.46645691 -304 252 C-304.03996094 252.94746094 -304.07992187 253.89492188 -304.12109375 254.87109375 C-304.9572601 290.33438424 -293.37694457 325.47851672 -271 353 C-270.33726074 353.82298584 -270.33726074 353.82298584 -269.66113281 354.66259766 C-243.13648417 387.39848101 -206.45213464 409.89002617 -164.16796875 414.5859375 C-121.26199882 418.49023219 -78.45488844 407.54487927 -40 389 C-39.13197754 388.58911133 -38.26395508 388.17822266 -37.36962891 387.75488281 C-18.98225875 379.02946409 -1.5789267 368.80810032 15 357 C5.70934692 355.48502685 -3.58674935 354.31277882 -12.9453125 353.30859375 C-14.33205857 353.15724927 -15.71876647 353.00555465 -17.10543823 352.85353088 C-22.18563383 352.29727647 -27.26645334 351.74682064 -32.34735107 351.19702148 C-36.67659819 350.72841675 -41.00554452 350.25720285 -45.33410263 349.78227425 C-47.35186476 349.56197266 -49.37001975 349.34555759 -51.38821411 349.1292572 C-53.21689529 348.92883568 -53.21689529 348.92883568 -55.08251953 348.72436523 C-56.15583527 348.60826401 -57.229151 348.49216278 -58.33499146 348.37254333 C-61 348 -61 348 -64 347 C-64.05116734 339.7083642 -64.08592757 332.41677557 -64.10986328 325.125 C-64.11985332 322.6500475 -64.13344995 320.1751066 -64.15087891 317.70019531 C-64.39114451 282.67795097 -64.39114451 282.67795097 -58.4375 271.6875 C-58.08236328 271.01654297 -57.72722656 270.34558594 -57.36132812 269.65429688 C-52.38336346 260.64862699 -46.17973124 255.26038787 -37.125 250.5625 C-36.48949219 250.23185547 -35.85398437 249.90121094 -35.19921875 249.56054688 C-22.95222661 243.68346916 -9.37676225 244.73573591 3.85546875 244.8046875 C5.96966925 244.80842327 8.08387149 244.81126757 10.19807434 244.81326294 C15.72999961 244.820855 21.26181784 244.84046494 26.79370117 244.8626709 C32.45164543 244.88322526 38.10960719 244.89228507 43.76757812 244.90234375 C54.8450988 244.92371543 65.92254046 244.95779724 77 245 C77.20535204 274.30870862 77.36460648 303.61736616 77.45958797 332.92664713 C77.47084421 336.38754133 77.48249312 339.8484341 77.49438477 343.30932617 C77.49792596 344.34281993 77.49792596 344.34281993 77.50153869 345.39719235 C77.54069153 356.55067669 77.611647 367.70374316 77.69437516 378.85697968 C77.77856576 390.30291592 77.82786071 401.74851318 77.84679645 413.19476789 C77.8585369 419.6234727 77.88615508 426.05123009 77.95157051 432.47963142 C78.01263996 438.52994489 78.03150817 444.57892039 78.01796913 450.62951279 C78.02044605 452.85036299 78.03836209 455.07125771 78.07284927 457.29184151 C78.32060349 474.06662211 78.32060349 474.06662211 75.08918571 478.79745293 C72.77833116 480.63919189 70.69047619 481.80509224 68 483 C66.45522858 484.00291183 64.92211288 485.02421949 63.40625 486.0703125 C-7.43771573 530.69398429 -90.90375069 549.24890502 -239 539 C-261.92931334 533.64305147 -283.79826584 526.23461439 -305 516 C-305.83611816 515.5982959 -306.67223633 515.1965918 -307.53369141 514.78271484 C-331.86023376 502.94805475 -353.84217905 487.3825291 -373.72265625 469.08984375 C-375.25280764 467.68567395 -376.80288035 466.30293584 -378.37109375 464.94140625 C-390.30271245 454.53703475 -400.52838149 442.64554211 -410 430 C-410.41314453 429.4544043 -410.82628906 428.90880859 -411.25195312 428.34667969 C-458.35077731 365.83437342 -471.64497028 285.32184056 -461 209 C-454.10933642 162.95225101 -436.6484911 118.21118693 -407 82 C-406.56864746 81.47245117 -406.13729492 80.94490234 -405.69287109 80.40136719 C-390.59118763 62.01910627 -374.15611598 45.18503308 -355 31 C-354.35869141 30.52353027 -353.71738281 30.04706055 -353.05664062 29.55615234 C-307.9439095 -3.70845868 -255.56603644 -22.70875403 -200 -29 C-198.62376465 -29.15662109 -198.62376465 -29.15662109 -197.21972656 -29.31640625 C-131.4868165 -36.3887929 -59.80890585 -29.29152455 0 0 Z " fill="#00FE00" transform="translate(464,31)"/>
                                 <path class="logoPath" style="animation-delay: 0.5s;" d="M0 0 C14.3784019 -0.09379403 28.75675578 -0.16388319 43.13540173 -0.20724869 C49.81295501 -0.22779977 56.49028917 -0.25628361 63.16772461 -0.30175781 C69.61924057 -0.34541544 76.07055872 -0.36917927 82.52221107 -0.37950897 C84.97602766 -0.38686464 87.42983418 -0.401228 89.8835659 -0.42292023 C114.55375288 -0.63222155 114.55375288 -0.63222155 125 4 C126.15757812 4.50660156 127.31515625 5.01320313 128.5078125 5.53515625 C142.49058073 13.69524935 152.52525335 25.10466224 157.16541672 40.73583794 C159.33883053 50.29111125 158.5489911 60.53407595 158.51416016 70.26586914 C158.51962709 72.82331259 158.52687207 75.38075276 158.53575134 77.93818665 C158.55104823 83.42898322 158.55441617 88.9195781 158.54698563 94.41038704 C158.53640126 102.37938834 158.54994766 110.34821395 158.56945018 118.31719189 C158.60073474 131.28999376 158.61578894 144.26275826 158.61914062 157.2355957 C158.61934461 158.01042179 158.6195486 158.78524788 158.61975877 159.58355355 C158.61996214 160.35922745 158.62016551 161.13490136 158.62037504 161.93408054 C158.62328558 172.89233873 158.63007295 183.85058522 158.64160156 194.80883789 C158.64240686 195.57815803 158.64321215 196.34747817 158.64404185 197.14011104 C158.65788315 210.04993239 158.67973835 222.95973358 158.7054714 235.86953634 C158.72076772 243.79875193 158.72816263 251.72790065 158.72467647 259.65713071 C158.72236078 265.76504513 158.72986071 271.87291308 158.74055672 277.98081779 C158.7432019 280.45724233 158.74255342 282.93367337 158.73804665 285.41009521 C158.66436694 328.96955724 160.31962743 377.15866047 192.296875 410.38671875 C198.77836095 416.62461944 206.05408076 420.93796057 214 425 C214.94359375 425.4846875 215.8871875 425.969375 216.859375 426.46875 C243.4429669 438.78431235 278.15375764 437.55354346 305.234375 427.83984375 C327.79689795 418.93509167 343.44714339 403.10531847 353.109375 381.12988281 C357.12211658 371.53362251 360.03702103 361.65546589 362.25 351.5 C362.40114258 350.81446045 362.55228516 350.1289209 362.70800781 349.42260742 C366.37694901 331.26217668 366.30944776 312.9602879 366.31667423 294.51889014 C366.3204117 290.55595773 366.33558796 286.59306569 366.34928894 282.63015747 C366.37143082 275.7845694 366.38652216 268.93899595 366.39665604 262.09337997 C366.41131789 252.19609576 366.43687509 242.29886255 366.46498732 232.40160848 C366.51031989 216.33920439 366.54699025 200.2767929 366.578125 184.21435547 C366.60836625 168.6225454 366.6427419 153.03075337 366.68261719 137.43896484 C366.68507874 136.4759073 366.68754028 135.51284975 366.69007643 134.52060865 C366.70245211 129.68864081 366.71490843 124.85667318 366.72740483 120.02470565 C366.83076968 80.01649548 366.92003944 40.00826339 367 0 C381.00454883 -0.07032543 395.00906996 -0.12290282 409.01375961 -0.15543652 C415.5175364 -0.1710554 422.02119408 -0.19222465 428.52490234 -0.22631836 C434.80782483 -0.25904648 441.09063315 -0.2768814 447.37363434 -0.28463173 C449.76406907 -0.29015112 452.15449794 -0.30092886 454.54488373 -0.31719017 C457.90733577 -0.33914307 461.26932314 -0.34195946 464.63183594 -0.34057617 C465.60792313 -0.351362 466.58401031 -0.36214783 467.5896759 -0.3732605 C483.6331542 -0.30239456 496.83315235 5.65841113 508.1953125 16.87109375 C521.5655026 31.06273817 523.1653111 48.73353668 523.11352539 67.33227539 C523.11324284 68.76215615 523.11340257 70.19203705 523.1139679 71.62191772 C523.11425324 75.47871269 523.10839917 79.33547616 523.10139394 83.19226384 C523.09511647 87.23213237 523.09455314 91.27200173 523.09336853 95.31187439 C523.09026812 102.95080573 523.08207221 110.58972264 523.07201904 118.22864765 C523.06081773 126.93001892 523.05533735 135.63139091 523.05032361 144.33276761 C523.03988845 162.22185322 523.02231412 180.11092545 523 198 C522.32730072 198.3630423 521.65460144 198.72608459 520.96151733 199.10012817 C517.85657072 200.77660562 514.75250087 202.45470031 511.6484375 204.1328125 C510.06180298 204.98903198 510.06180298 204.98903198 508.44311523 205.86254883 C499.1690296 210.87874332 490.00409775 216.06885837 480.875 221.34326172 C478.22919844 222.86792284 475.57913637 224.38492291 472.92715454 225.89880371 C470.56978706 227.24508158 468.2142901 228.59461111 465.85906982 229.94464111 C464.17113369 230.9110857 462.4813437 231.8742902 460.79150391 232.83740234 C455.31236745 235.98564013 450.05501302 239.2051398 445 243 C447.53353816 244.68902544 449.84142372 245.92118685 452.59375 247.1796875 C453.52807861 247.60781738 454.46240723 248.03594727 455.42504883 248.47705078 C456.43978271 248.93837402 457.4545166 249.39969727 458.5 249.875 C459.55791748 250.3582373 460.61583496 250.84147461 461.70581055 251.33935547 C469.71763049 254.98860493 477.76111582 258.56409705 485.8125 262.125 C493.87141047 265.69170962 501.9061408 269.29831525 509.875 273.0625 C510.63530518 273.42037598 511.39561035 273.77825195 512.17895508 274.14697266 C512.88044678 274.48132324 513.58193848 274.81567383 514.3046875 275.16015625 C514.90265137 275.44511963 515.50061523 275.73008301 516.11669922 276.02368164 C516.73818848 276.3458667 517.35967773 276.66805176 518 277 C518.89041992 277.38567139 519.78083984 277.77134277 520.69824219 278.16870117 C523 280 523 280 523.58349609 283.18847656 C523.56367676 284.49268555 523.54385742 285.79689453 523.5234375 287.140625 C523.51918762 287.85103439 523.51493774 288.56144379 523.51055908 289.29338074 C523.49008239 291.61331074 523.43334957 293.93073854 523.375 296.25 C523.35162465 297.85161959 523.32998633 299.45326544 523.31005859 301.05493164 C523.24305248 305.70443123 523.1268018 310.35180463 523 315 C522.97099609 316.18126465 522.94199219 317.3625293 522.91210938 318.57958984 C522.76234698 324.19829189 522.52248663 329.80294337 522.16210938 335.41210938 C522.05163689 337.17567619 521.95452134 338.94011857 521.86914062 340.70507812 C521.29870265 352.20477697 520.03271148 360.50583951 513 370 C512.23030653 371.12352569 511.46486214 372.24997111 510.703125 373.37890625 C496.97400581 393.46651267 479.62913676 412.78514027 460.57421875 427.92578125 C458.17745505 429.8570127 455.89797717 431.86325307 453.625 433.9375 C448.01286185 438.96668718 442.02308988 443.48193083 436 448 C435.28489258 448.53963379 434.56978516 449.07926758 433.83300781 449.63525391 C407.22199453 469.68131096 378.74924191 486.0430168 349 501 C348.14003418 501.43731445 347.28006836 501.87462891 346.39404297 502.32519531 C330.12019764 510.56318747 313.13930385 517.20876448 296.2462616 524.04818726 C291.107399 526.13233841 285.98563572 528.25243372 280.87890625 530.4140625 C260.19601394 539.15845527 239.38786501 546.16722188 217.76245117 552.19433594 C210.6307058 554.19345034 203.71555667 556.37090645 196.859375 559.1875 C189.30956756 561.33280047 182.32813935 559.4103128 174.9375 557.5 C173.89110352 557.23227783 172.84470703 556.96455566 171.76660156 556.6887207 C140.14317653 548.36539349 109.22032435 535.16939143 84 514 C83.42314453 513.52175781 82.84628906 513.04351563 82.25195312 512.55078125 C71.04597108 503.24634792 60.97039531 493.52703186 52 482 C51.36989014 481.20045898 51.36989014 481.20045898 50.72705078 480.38476562 C42.28497479 469.60445057 35.46895506 458.05038657 29 446 C28.4416748 444.9776123 28.4416748 444.9776123 27.87207031 443.93457031 C6.75166376 404.70518359 -0.22446559 356.73862172 -0.12025452 312.78199768 C-0.12069202 311.42024193 -0.12157021 310.05848626 -0.12284368 308.69673103 C-0.12505343 305.00229557 -0.12111633 301.30788973 -0.11606562 297.61345804 C-0.11171005 293.61163936 -0.11321114 289.60982209 -0.1139679 285.60800171 C-0.11448992 278.69032464 -0.11137687 271.77265706 -0.10573006 264.85498238 C-0.09757127 254.85342942 -0.09499536 244.85188102 -0.09374207 234.8503251 C-0.0915584 218.61985932 -0.08491696 202.38939859 -0.07543945 186.15893555 C-0.06624756 170.4011233 -0.05917543 154.64331243 -0.05493164 138.88549805 C-0.05466892 137.91269135 -0.05440619 136.93988464 -0.05413551 135.93759895 C-0.05283038 131.05686718 -0.0515667 126.17613539 -0.05032361 121.2954036 C-0.03997235 80.86359889 -0.02237276 40.43179973 0 0 Z " fill="#00FE00" transform="translate(572,30)"/>
@@ -204,16 +188,37 @@
                                 <path class="logoPath" style="animation-delay: 0.5s;" d="M0 0 C0.66 0 1.32 0 2 0 C2.20753906 1.13695312 2.41507813 2.27390625 2.62890625 3.4453125 C5.60094305 18.72271193 11.20359341 30.7415791 21 43 C21.41266113 43.51949219 21.82532227 44.03898438 22.25048828 44.57421875 C31.76392405 56.46336594 42.57063089 66.1757513 55 75 C55.85851562 75.61125732 55.85851562 75.61125732 56.734375 76.23486328 C66.06248594 82.82284164 75.69687948 88.10290759 86 93 C88.00225224 93.99548279 90.00308638 94.99385092 92 96 C92 96.66 92 97.32 92 98 C5.32603646 98.19572743 5.32603646 98.19572743 -24.3125 97.5625 C-25.29782715 97.54285187 -26.2831543 97.52320374 -27.29833984 97.50296021 C-29.98686138 97.44734962 -32.67504015 97.38411444 -35.36328125 97.31640625 C-36.12671341 97.29968872 -36.89014557 97.28297119 -37.67671204 97.26574707 C-42.7655109 97.11724455 -42.7655109 97.11724455 -45 96 C-45 95.34 -45 94.68 -45 94 C-43.53125 92.58984375 -43.53125 92.58984375 -41.5 90.9375 C-15.72500966 68.78005217 -3.52453701 32.82854473 0 0 Z " fill="#00fe00" transform="translate(561,474)"/>
                             </svg>
                             <strong class="sub_text" style="font-family: Goldman, sans-serif;font-weight: 300;background: linear-gradient(135deg, #ffffff, #76b500);-webkit-background-clip: text;    -webkit-text-fill-color: transparent;background-clip: text;animation: move_text 2s;">Educação Inteligente</strong>
+                            <p class="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">Aprenda com os melhores profissionais e transforme seu futuro com cursos práticos e acessíveis</p>
+
+                            <div style="display: flex;align-items: center;flex-wrap: wrap;justify-content: space-evenly;">
+                                <a href="#cursos"><button class="btn-folow transition">Explorar Cursos <span class="material-symbols-outlined">arrow_right_alt</span></button></a>
+                                <a href="#contato"><button class="btn-folow btn-folow-two transition">Entre em Contato</button></a>
+                            </div>
                         </div>
                     </div>
-                </div></a>
-            </div>
+                </div>
+                <div class="content-cards">
+                    <div class="card-metricas">
+                        <h2>350+</h2>
+                        <p>Alunos Ativos</p>
+                    </div>
+                    <div class="card-metricas hoverCardTwo">
+                        <h2 style="color: #a892f7;">50+</h2>
+                        <p>Cursos Disponíveis</p>
+                    </div>
+                    <div class="card-metricas hoverCardThree">
+                        <h2 style="color: #40c5f2;">95%</h2>
+                        <p>Satisfação</p>
+                    </div>
+                </div>  
         </div>
         </section>
         <section id="habilidades">
         <div class="info" id="cursos" style="height: auto;position: relative;z-index: 2;">
-            <strong style="color: aliceblue;font-size: 3vh;margin-top: 70px;font-family: Goldman, sans-serif;font-weight: 200;">Cursos</strong>
-            <strong style="color: aliceblue;font-size: 4vh;margin-top: 70px;font-family: Goldman, sans-serif;font-weight: 200;background: linear-gradient(135deg, #9b8bff, #0DEF7C);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;">Inglês GUP</strong>
+            <strong style="color: aliceblue;font-size: 2rem;margin-top: 70px;font-weight: bolder;background: linear-gradient(135deg, #d1caff, #00ff22);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;">Nossos Cursos</strong>
+            <div class="div-d"></div>
+            <p class="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">Desenvolvemos cursos práticos e atualizados para o mercado de trabalho</p>
+            <strong style="color: aliceblue;font-size: 4vh;font-family: Goldman, sans-serif;font-weight: 200;background: linear-gradient(135deg, #9b8bff, #0DEF7C);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;">Inglês GUP</strong>
                 <div class="line_horizontal">
                     <span class="mini_ball" style="left: -5px;top: -1vh;"></span>
                         <div class="statusJob" style="padding: 3px;top: -18px;border-radius: 20px;">
@@ -222,85 +227,61 @@
                     <span class="mini_ball"  style="right: -5px;top: -1vh;"></span>
                 </div>
                 <div class="carrocel">
-                    <div class="content_empresas" id="list_english">
-                    <div class="content_img_empresa" id="btn-gup">
+                    <div class="content_empresas" id="list_english" style="flex-wrap: wrap;height: auto;">
+                    <div class="content_img_empresa">
                         <div class="imgTop" style="margin:0;">
-                            <img id="loadImgUser" src="img/kids.png" alt="" style="width:20vh;">
+                            <span class="material-symbols-outlined">language_us</span>
                         </div>
                         <div class="content_curso">
+                            <h2 style="border: none;" data-text="English Baby" id="text_dynamic">English Baby</h2>
                             <div class="content_curso">
-                            <h4 style="margin: 0;color: aliceblue;margin-top: 4vh;">6 À 9 ANOS</h4>
-                            <ul class="space-y-3 text-gray-700 mb-8">
-                                <li class="flex items-center">
-                                    <span>Aulas 100% práticas</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <span>Certificado reconhecido</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <span>Horários flexíveis</span>
-                                </li>
-                            </ul>
                         </div>
-                        <div style="display:flex;align-items:center;">
-                            <p style="font-size: 2.5vh;" class="btn_custon">Saiba mais</p>
-                        </div>
-                        </div>
-                        <div class="statusJob">
-                            <span style="color:#1e331e;" class="material-symbols-outlined">south_america</span>
-                            <p style="font-family: Goldman, sans-serif;margin:0;border: none;" data-text="ENGLISH KIDS" id="text_dynamic">ENGLISH KIDS</p>
+                            <h4>Exclusivo para crianças de 5 a 7 anos.</h4>
+                            <div class="align-simple"><span style="color: rgb(105, 248, 73);" class="material-symbols-outlined">schedule</span><h4 style="margin: 0;">12 Meses</h4></div>
+                            <div class="align-simple"><span style="color: rgb(105, 248, 73);" class="material-symbols-outlined">groups</span><h4 style="margin: 0;">1 Turmas</h4></div>
+                            <div class="align-simple"><span style="color: rgb(64, 197, 242);font-variation-settings:  'FILL' 1;" class="material-symbols-outlined">kid_star</span><h4 style="margin: 0;font-weight: 800;color: aliceblue;">5</h4></div>
+                            <p style="font-size: 2.5vh;" class="btn_custon">Saiba mais <span class="material-symbols-outlined">arrow_right_alt</span></p>
                         </div>
                     </div>
-                    <div class="content_img_empresa" id="btn-logistica">
-                    <div class="imgTop" style="margin:0;">
-                            <img id="loadImgUser" src="img/tenns.png" alt="" style="width:20vh;">
-                        </div>
-                        <div class="content_curso">
-                            <h4 style="margin: 0;color: aliceblue;margin-top: 4vh;">10 À 17 ANOS</h4>
-                            <ul class="space-y-3 text-gray-700 mb-8">
-                                <li class="flex items-center">
-                                    <span>Aulas 100% práticas</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <span>Certificado reconhecido</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <span>Horários flexíveis</span>
-                                </li>
-                            </ul>
-                            <div style="display:flex;align-items:center;">
-                                <p style="font-size: 2.5vh;" class="btn_custon">Saiba mais</p>
-                            </div>
-                        </div>
-                        <div class="statusJob">
-                            <span style="color:#1e331e;" class="material-symbols-outlined">south_america</span>
-                            <p style="font-family: Goldman, sans-serif;margin:0;border: none;">ENGLISH TEENS</p>
-                        </div>
-                    </div>
-                    <div class="content_img_empresa" id="btn-optimize">
+                    <div class="content_img_empresa">
                         <div class="imgTop" style="margin:0;">
-                            <img id="loadImgUser" src="img/master.png" alt="" style="width:20vh;">
+                            <span class="material-symbols-outlined">language_us</span>
                         </div>
                         <div class="content_curso">
-                        <h4 style="margin: 0;color: aliceblue;margin-top: 4vh;">18 ANOS</h4>
-                        <ul class="space-y-3 text-gray-700 mb-8">
-                            <li class="flex items-center">
-                                <span>Aulas 100% práticas</span>
-                            </li>
-                            <li class="flex items-center">
-                                <span>Certificado reconhecido</span>
-                            </li>
-                            <li class="flex items-center">
-                                <span>Horários flexíveis</span>
-                            </li>
-                        </ul>
-                        <div style="display:flex;align-items:center;">
-                            <p style="font-size: 2.5vh;" class="btn_custon">Saiba mais</p>
+                            <h2 style="border: none;" data-text="English Kids" id="text_dynamic">English Kids</h2>
+                            <div class="content_curso">
                         </div>
+                            <h4>Inglês para crianças, melhor idade para aprender.</h4>
+                            <div class="align-simple"><span style="color: rgb(105, 248, 73);" class="material-symbols-outlined">schedule</span><h4 style="margin: 0;">12 Meses</h4></div>
+                            <div class="align-simple"><span style="color: rgb(105, 248, 73);" class="material-symbols-outlined">groups</span><h4 style="margin: 0;">9 Turmas</h4></div>
+                            <div class="align-simple"><span style="color: rgb(64, 197, 242);font-variation-settings:  'FILL' 1;" class="material-symbols-outlined">kid_star</span><h4 style="margin: 0;font-weight: 800;color: aliceblue;">4.9</h4></div>
+                            <p style="font-size: 2.5vh;" class="btn_custon">Saiba mais <span class="material-symbols-outlined">arrow_right_alt</span></p>
                         </div>
-                        <div class="statusJob">
-                            <span style="color:#1e331e;" class="material-symbols-outlined">south_america</span>
-                            <p style="font-family: Goldman, sans-serif;margin:0;border: none;">ENGLISH MASTER</p>
+                    </div>
+                    <div class="content_img_empresa">
+                    <div class="imgTop" style="margin:0;"">
+                            <span class="material-symbols-outlined">language_us</span>
+                        </div>
+                        <div class="content_curso">
+                            <h2 style="border: none;" data-text="ENGLISH KIDS" id="text_dynamic">English Teens</h2>
+                            <h4>Inglês adolecentes, exclusivo e personalizado GUP.</h4>
+                            <div class="align-simple"><span style="color: rgb(105, 248, 73);" class="material-symbols-outlined">schedule</span><h4 style="margin: 0;">12 Meses</h4></div>
+                            <div class="align-simple"><span style="color: rgb(105, 248, 73);" class="material-symbols-outlined">groups</span><h4 style="margin: 0;">2 Turmas</h4></div>
+                            <div class="align-simple"><span style="color: rgb(64, 197, 242);font-variation-settings:  'FILL' 1;" class="material-symbols-outlined">kid_star</span><h4 style="margin: 0;font-weight: 800;color: aliceblue;">4.8</h4></div>
+                            <p style="font-size: 2.5vh;" class="btn_custon">Saiba mais <span class="material-symbols-outlined">arrow_right_alt</span></p>
+                        </div>
+                    </div>
+                    <div class="content_img_empresa">
+                        <div class="imgTop" style="margin:0;">
+                            <span class="material-symbols-outlined">language_us</span>
+                        </div>
+                        <div class="content_curso">
+                            <h2 style="border: none;" data-text="ENGLISH KIDS" id="text_dynamic">English Master</h2>
+                            <h4>Inglês para adultos, foco em conversação, aprenda sem enrolação.</h4>
+                            <div class="align-simple"><span style="color: rgb(105, 248, 73);" class="material-symbols-outlined">schedule</span><h4 style="margin: 0;">12 Meses</h4></div>
+                            <div class="align-simple"><span style="color: rgb(105, 248, 73);" class="material-symbols-outlined">groups</span><h4 style="margin: 0;">2 Turma</h4></div>
+                            <div class="align-simple"><span style="color: rgb(64, 197, 242);font-variation-settings:  'FILL' 1;" class="material-symbols-outlined">kid_star</span><h4 style="margin: 0;font-weight: 800;color: aliceblue;">4.9</h4></div>
+                            <p style="font-size: 2.5vh;" class="btn_custon">Saiba mais <span class="material-symbols-outlined">arrow_right_alt</span></p>
                         </div>
                     </div>
                 </div>
@@ -321,141 +302,113 @@
                     <span style="color:#ffffff;" class="material-symbols-outlined">chevron_right</span>
                 </div>
                 <div class="content_empresas" id="list_prof">
-
-                    <div class="content_img_empresa" id="btn-fisio">
+                    <div class="content_img_empresa">
                     <div class="imgTop" style="margin:0;">
-                            <img id="loadImgUser" src="img/excel.png" alt="" style="width:20vh;">
+                            <span class="material-symbols-outlined">palette</span>
                         </div>
+                        <h2 style="border: none;" data-text="English Baby" id="text_dynamic">Designer Gráfico</h2>
                         <div class="content_curso">
-                            <h4 style="margin: 0;color: aliceblue;margin-top: 4vh;">TODAS AS IDADES</h4>
-                            <ul class="space-y-3 text-gray-700 mb-8">
-                                <li class="flex items-center">
-                                    <span>Aulas oline e no LAB</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <span>Certificado reconhecido</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <span>Horários flexíveis</span>
-                                </li>
-                            </ul>
-                            <div style="display:flex;align-items:center;">
-                                <p style="font-size: 2.5vh;" class="btn_custon">Saiba mais</p>
-                            </div>
-                        </div>
-                        <div class="statusJob">
-                            <span style="color:#1e331e;" class="material-symbols-outlined">editor_choice</span>
-                            <p style="font-family: Goldman, sans-serif;margin:0;border: none;">EXCEL AVANÇADO</p>
+                            <h4>Photoshop, Illustrator e técnicas de design</h4>
+                            <div class="align-simple"><span style="color: rgb(105, 248, 73);" class="material-symbols-outlined">schedule</span><h4 style="margin: 0;">12 Meses</h4></div>
+                            <div class="align-simple"><span style="color: rgb(105, 248, 73);" class="material-symbols-outlined">groups</span><h4 style="margin: 0;">1 Turmas</h4></div>
+                            <div class="align-simple"><span style="color: rgb(64, 197, 242);font-variation-settings:  'FILL' 1;" class="material-symbols-outlined">kid_star</span><h4 style="margin: 0;font-weight: 800;color: aliceblue;">5</h4></div>
+                            <p style="font-size: 2.5vh;" class="btn_custon">Saiba mais <span class="material-symbols-outlined">arrow_right_alt</span></p>
                         </div>
                     </div>
-                    <div class="content_img_empresa" id="btn-rc">
+                    <div class="content_img_empresa">
                     <div class="imgTop" style="margin:0;">
-                            <img id="loadImgUser" src="img/computador.png" alt="" style="width:20vh;">
+                            <span class="material-symbols-outlined">memory</span>
                         </div>
+                        <h2 style="border: none;" data-text="English Baby" id="text_dynamic">Redes de Computadores</h2>
                         <div class="content_curso">
-                        <h4 style="margin: 0;color: aliceblue;margin-top: 4vh;">TODAS AS IDADES</h4>
-                        <ul class="space-y-3 text-gray-700 mb-8">
-                            <li class="flex items-center">
-                                <span>Aulas oline e no LAB</span>
-                            </li>
-                            <li class="flex items-center">
-                                <span>Certificado reconhecido</span>
-                            </li>
-                            <li class="flex items-center">
-                                <span>Horários flexíveis</span>
-                            </li>
-                        </ul>
-                            <div style="display:flex;align-items:center;">
-                                <p style="font-size: 2.5vh;" class="btn_custon">Saiba mais</p>
-                            </div>
-                        </div>
-                        <div class="statusJob">
-                            <span style="color:#1e331e;" class="material-symbols-outlined">editor_choice</span>
-                            <p style="font-family: Goldman, sans-serif;margin:0;border: none;">OPERADOR DE COMPUTADOR</p>
+                            <h4>Infraestrutura, segurança e configuração</h4>
+                            <div class="align-simple"><span style="color: rgb(105, 248, 73);" class="material-symbols-outlined">schedule</span><h4 style="margin: 0;">12 Meses</h4></div>
+                            <div class="align-simple"><span style="color: rgb(105, 248, 73);" class="material-symbols-outlined">groups</span><h4 style="margin: 0;">1 Turmas</h4></div>
+                            <div class="align-simple"><span style="color: rgb(64, 197, 242);font-variation-settings:  'FILL' 1;" class="material-symbols-outlined">kid_star</span><h4 style="margin: 0;font-weight: 800;color: aliceblue;">5</h4></div>
+                            <p style="font-size: 2.5vh;" class="btn_custon">Saiba mais <span class="material-symbols-outlined">arrow_right_alt</span></p>
                         </div>
                     </div>
 
                     <div class="content_img_empresa" id="">
                     <div class="imgTop" style="margin:0;">
-                            <img id="loadImgUser" src="img/designer.png" alt="" style="width:20vh;">
+                            <span class="material-symbols-outlined">business_center</span>
                         </div>
+                        <h2 style="border: none;" data-text="English Baby" id="text_dynamic">Administração</h2>
                         <div class="content_curso">
-                            <h4 style="margin: 0;color: aliceblue;margin-top: 4vh;">TODAS AS IDADES</h4>
-                            <ul class="space-y-3 text-gray-700 mb-8">
-                                <li class="flex items-center">
-                                    <span>Aulas oline e no LAB</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <span>Certificado reconhecido</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <span>Horários flexíveis</span>
-                                </li>
-                            </ul>
-                            <div style="display:flex;align-items:center;">
-                                <p style="font-size: 2.5vh;" class="btn_custon">Saiba mais</p>
-                            </div>
-                        </div>
-                        <div class="statusJob">
-                            <span style="color:#1e331e;" class="material-symbols-outlined">editor_choice</span>
-                            <p style="font-family: Goldman, sans-serif;margin:0;border: none;">DESIGNER GRÁFICO</p>
+                            <h4>Gestão, finanças e empreendedorismo</h4>
+                            <div class="align-simple"><span style="color: rgb(105, 248, 73);" class="material-symbols-outlined">schedule</span><h4 style="margin: 0;">12 Meses</h4></div>
+                            <div class="align-simple"><span style="color: rgb(105, 248, 73);" class="material-symbols-outlined">groups</span><h4 style="margin: 0;">1 Turmas</h4></div>
+                            <div class="align-simple"><span style="color: rgb(64, 197, 242);font-variation-settings:  'FILL' 1;" class="material-symbols-outlined">kid_star</span><h4 style="margin: 0;font-weight: 800;color: aliceblue;">5</h4></div>
+                            <p style="font-size: 2.5vh;" class="btn_custon">Saiba mais <span class="material-symbols-outlined">arrow_right_alt</span></p>
                         </div>
                     </div>
                     <div class="content_img_empresa" id="marketing">
                     <div class="imgTop" style="margin:0;">
-                            <img id="loadImgUser" src="img/marketing.png" alt="" style="width:20vh;">
+                            <span class="material-symbols-outlined">build</span>
                         </div>
+                        <h2 style="border: none;" data-text="English Baby" id="text_dynamic">Manutenção de Computadores</h2>
                         <div class="content_curso">
-                            <h4 style="margin: 0;color: aliceblue;margin-top: 4vh;">TODAS AS IDADES</h4>
-                            <ul class="space-y-3 text-gray-700 mb-8">
-                                <li class="flex items-center">
-                                    <span>Aulas oline e no LAB</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <span>Certificado reconhecido</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <span>Horários flexíveis</span>
-                                </li>
-                            </ul>
-                            <div style="display:flex;align-items:center;">
-                                <p style="font-size: 2.5vh;" class="btn_custon">Saiba mais</p>
-                            </div>
-                        </div>
-                        <div class="statusJob">
-                            <span style="color:#1e331e;" class="material-symbols-outlined">editor_choice</span>
-                            <p style="font-family: Goldman, sans-serif;margin:0;border: none;">MARKETING DIGITAL</p>
+                            <h4>Hardware, software e troubleshooting</h4>
+                            <div class="align-simple"><span style="color: rgb(105, 248, 73);" class="material-symbols-outlined">schedule</span><h4 style="margin: 0;">12 Meses</h4></div>
+                            <div class="align-simple"><span style="color: rgb(105, 248, 73);" class="material-symbols-outlined">groups</span><h4 style="margin: 0;">1 Turmas</h4></div>
+                            <div class="align-simple"><span style="color: rgb(64, 197, 242);font-variation-settings:  'FILL' 1;" class="material-symbols-outlined">kid_star</span><h4 style="margin: 0;font-weight: 800;color: aliceblue;">5</h4></div>
+                            <p style="font-size: 2.5vh;" class="btn_custon">Saiba mais <span class="material-symbols-outlined">arrow_right_alt</span></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="events-content">
+        <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+            <strong style="color: aliceblue;font-size: 2rem;margin-top: 70px;font-weight: bolder;background: linear-gradient(135deg, #d1caff, #00ff22);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;">Nosso Eventos</strong>
+            <div class="div-d"></div>
+        </div>
+            <div class="content_empresas" id="" style="margin-top: 1rem;">
+                <div class="content_img_empresa direction" id="" style="border: none;background:rgb(0 0 0);width: 100%;max-width: 100%;align-items: normal;overflow: hidden;justify-content: flex-start;padding: 0;">
+                    <img src="img/banner culture day.png" alt="">
+                    <div style="padding: 1rem;width: 100%;">
+                        <h1 class="top-events" style="font-weight: 100;margin: 0;font-size: xxx-large;text-align: center;">CULTURE DAY</h1>
+                        <h2 style="margin: 0;font-size: large;color: #767676;font-weight: 100;text-align: center;">Nosso evento anual, venha se divertir com a gente!</h2>
+                        <h3 style="margin: 0;font-weight: 200;margin-bottom: 23px;color: #767676;text-align: center;">Vestimenta representando um país</h3>
+                        <div style="display: flex;align-items: center;width: 100%;justify-content: center;">
+                            <span style="color:#69f849;bottom: -18px;top: auto;font-size: large;" class="material-symbols-outlined">today</span>
+                            <p style="font-family: Goldman, sans-serif;margin:0;border: none;color: #69f849;background: transparent;font-size: large;width: auto;" data-text="ENGLISH KIDS" id="">06/08/2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+            <strong style="color: aliceblue;font-size: 2rem;margin-top: 70px;font-weight: bolder;background: linear-gradient(135deg, #d1caff, #00ff22);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;">Entre em Contato</strong>
+            <div class="div-d"></div>
+            <p class="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">Estamos prontos para ajudar você a começar sua jornada</p>
+        </div>
         <div class="content_form">
         <div class="form">
-            <h2 style="font-family: Goldman, sans-serif;font-size: large;font-weight: 100;">Informe seu contato:</h2>
-            <h3 style="font-size: smaller;font-weight: 100;">Nossos especialistas entraram em contato com você para lhe ajudar a escolher qual curso irá agregar em sua vida profissional.</h3>
+            <h1 style="font-size: 1.5rem;margin: 1.5rem;text-align: center;">Envie Sua Mensagem</h1>
             <p>Nome*</p>
             <input type="text" id="nome" placeholder="Nome">
-            <p>Celular</p>
+            <p>Celular*</p>
             <input type="text" id="celular" placeholder="Celular" onkeyup="handlePhone(event)">
             <p>E-mail</p>
             <input type="text" id="email" placeholder="E-mail">
-            <button id="cad_lead" disabled="true">Falar com um atendente<span style="color:#1e331e;font-size: medium;" class="material-symbols-outlined">phone</span></button>
+            <button id="cad_lead">Falar com um atendente<span style="color:#1e331e;font-size: large;" class="material-symbols-outlined">send</span></button>
         </div>
         </div>
         <div class="info_curso" id="content_curso" style="display: none;">
             <div class="data_curso">
                 <button class="close" id="close_curso"><span style="color:#ffffff;margin: 0;font-size: 2vh;" class="material-symbols-outlined">close</span></button>
-                <span class="ball" style="bottom: 1vh;right: 0;background: #003249;"></span>
-                <span class="ball" style="bottom: 1vh;right: 120px;background: #007ea7;"></span>
-                <span class="ball" style="bottom: 1vh;right: 240px;background: #aef3e7;"></span>
-                <span class="ball" style="bottom: 1vh;right: 360px;background:#8ee3ef;"></span>
-                <span class="ball" style="left: 0;background: #8ee3ef;"></span>
-                <span class="ball" style="left: 120px;background: #aef3e7;"></span>
-                <span class="ball" style="left: 240px;background: #007ea7;"></span>
-                <span class="ball" style="left: 360px;background:#003249;"></span>
+                <span class="ball" style="animation-delay: 0.1s;bottom: 1vh;right: 360px;background: #003249;">Cultura</span>
+                <span class="ball" style="animation-delay: 0.4s;bottom: 1vh;right: 240px;background: #007ea7;">Lazer</span>
+                <span class="ball" style="animation-delay: 0.8s;bottom: 1vh;right: 120px;background: #aef3e7;">Caráter</span>
+                <span class="ball" style="animation-delay: 1.2s;bottom: 1vh;right: 0px;background:#8ee3ef;"></span>
+                <span class="ball" style="animation-delay: 1.5s;left: 0;background: #8ee3ef;">Disciplina</span>
+                <span class="ball" style="animation-delay: 1.8s;left: 120px;background: #aef3e7;">Acolhimento</span>
+                <span class="ball" style="animation-delay: 2.1s;left: 240px;background: #007ea7;">Educação</span>
+                <span class="ball" style="animation-delay: 2.4s;left: 360px;background:#003249;">Inteligente</span>
+
                 
-                <div class="showCurso" id="data_gup" style="display: none; color: #ffffff;animation: move_text 0.4s;">
+                <div class="showCurso" id="data_gup" style="display: none; color: #ffffff;animation: move_text 0.4s;display: flex;flex-direction: column;align-items: center;">
                     <div class="imgTop" style="margin:5vh;">
                         <img id="loadImgUser" src="img/kids.png" alt="" style="width:20vh;">
                     </div>
@@ -500,82 +453,87 @@
                 </div>
             </div>
         </div>
-        <div class="info" >
-            <div class="background_sobre"></div>
-            <div class="bc">
-                <div class="content_empresas" id="empresas-view">
-                    <div class="content_img_empresa" style="justify-content: flex-start;border:none;background: linear-gradient(45deg, #271f45, transparent);border-color: #5f7fff;flex-direction: column;">
-                       <div class="imgTop" style="margin:0vh;">
-                            <span id="icon" class="material-symbols-outlined" style="color:#818fff;font-size: 10vh;">workspace_premium</span>
-                       </div>
-                        <strong style="font-size: 2vh;margin: 2vh;font-weight: 100;border-top: 2px solid #1e213161;font-family: Goldman, sans-serif;background: linear-gradient(135deg, #593EFF, #0DEF7C);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;">Receba um certificado de peso no mercado!</strong>
-                        <div class="statusJob" style="position: static;background: transparent">
-                            <p style="font-family: Goldman, sans-serif;margin:0;border: none;color: aliceblue;">Certificado</p>
-                        </div>
-                    </div>
-                    <div class="content_img_empresa" style="justify-content: flex-start;border:none;background: linear-gradient(45deg, #271f45, transparent);border-color: #5f7fff;flex-direction: column;">
-                       <div class="imgTop" style="margin:0vh;">
-                            <span id="icon" class="material-symbols-outlined" style="color:#818fff;font-size: 10vh;">school</span>
-                       </div>
-                        <strong style="font-size: 2vh;margin: 2vh;font-weight: 100;border-top: 2px solid #1e213161;font-family: Goldman, sans-serif;background: linear-gradient(135deg, #593EFF, #0DEF7C);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;">Evento de formatura para deixar registrado seu sucesso e conquistas!</strong>
-                        <div class="statusJob" style="position: static;background: transparent">
-                            <p style="font-family: Goldman, sans-serif;margin:0;border: none;color: aliceblue;">Formatura</p>
-                        </div>
-                    </div>
-                 </div>
-            </div>
-        </div>
         </section>
         <section id="sobre_section" >
         <div class="info" style="height: auto;position: relative;z-index: 2;color: aliceblue;" id="sobre">
-            <strong style="color: aliceblue;font-size: 3vh;margin-top: 70px;margin-bottom: 3vh;font-family: Goldman, sans-serif;font-weight: 200;">Sobre nós</strong>
-            <h5 style="font-size: large;font-family: Goldman, sans-serif;">Muito além do inglês, uma formação para a vida.</h5>
-            <div style="max-width: 75%;">
-                <p>A GUP Educação Inteligente nasceu do desejo de transformar a educação. Não somos apenas uma escola de idiomas ou um centro de treinamento profissional; somos um espaço de desenvolvimento integral do ser humano. Acreditamos que o verdadeiro aprendizado vai além da memorização de regras e da aquisição de habilidades técnicas. Ele molda quem somos, fortalece nossos valores e nos prepara para um futuro globalizado e competitivo, sem nunca esquecer da nossa essência.</p>
-                <p>Nossa missão é oferecer uma jornada educacional que une fluência em inglês, capacitação profissional e, acima de tudo, a formação de caráter, incentivando a cultura e o lazer como pilares do conhecimento.</p>
-                <ul style="color: floralwhite;">
-                    <li><strong style="font-family: Goldman, sans-serif;font-weight: 100;color: #52b800;">Inglês para o Mundo (Cultura e Lazer):</strong> Nosso carro-chefe, o curso de inglês, é a porta de entrada para um universo de possibilidades. Abandonamos o ensino tradicional e monótono para criar uma experiência imersiva e divertida. Aqui, o aprendizado acontece através de músicas, filmes, debates culturais, jogos e projetos interativos. O objetivo não é apenas falar inglês, mas pensar em inglês e se conectar com o mundo de forma autêntica e confiante.</li>
-                    <li><Strong style="font-family: Goldman, sans-serif;font-weight: 100;color: #52b800;">Formação de Caráter (Valores):</Strong> Em cada aula e projeto, reforçamos valores essenciais como ética, responsabilidade, respeito e proatividade. Entendemos que o mercado de trabalho e a vida em sociedade exigem mais do que competências técnicas; exigem cidadãos íntegros e conscientes do seu papel. Preparamos nossos alunos para serem não apenas grandes profissionais, mas grandes pessoas.</li>
-                    <li><Strong style="font-family: Goldman, sans-serif;font-weight: 100;color: #52b800;">Profissional para o Futuro (Carreira): </Strong> Com nossos cursos profissionalizantes, focamos em preparar os alunos para as demandas reais do mercado de trabalho. Oferecemos formação em áreas estratégicas [Ex: Atendimento ao Cliente, Gestão de Vendas, Marketing Digital, Informática para Negócios, etc.], com professores atuantes no mercado e uma metodologia prática. O objetivo é claro: capacitar, qualificar e gerar oportunidades de emprego e crescimento na carreira.</li>
-                </ul>
+            <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+                <strong style="color: aliceblue;font-size: 2rem;margin-top: 70px;font-weight: bolder;background: linear-gradient(135deg, #d1caff, #00ff22);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;">Nosso Objetivo</strong>
+                <div class="div-d"></div>
             </div>
-            <strong style="color: aliceblue;font-size: 4vh;font-family: Goldman, sans-serif;">Nossos Profissionais</strong>
+                <div class="content_empresas" style="flex-wrap: wrap;margin-top: 1rem;height: auto;" id="objetivos">
+                    <div class="content_img_empresa" style="align-items: center;">
+                    <div class="imgTop circle_icon" style="margin:0;">
+                            <span class="material-symbols-outlined">my_location</span>
+                        </div>
+                        <h2 style="border: none;margin-bottom: 0;font-size: 1.4rem;" data-text="English Kids" id="text_dynamic">Missão</h2>
+                        <h4 style="font-size: 0.9rem;text-align: center;margin: 1rem;">Democratizar o acesso à educação de qualidade e formar profissionais preparados para o mercado.</h4>
+                    </div>
+                                        <div class="content_img_empresa" style="align-items: center;">
+                    <div class="imgTop circle_icon" style="margin:0;">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </div>
+                        <h2 style="border: none;margin-bottom: 0;font-size: 1.4rem;" data-text="English Kids" id="text_dynamic">Compromisso</h2>
+                        <h4 style="font-size: 0.9rem;text-align: center;margin: 1rem;">Dedicação total ao desenvolvimento e sucesso de cada aluno em sua jornada educacional.</h4>
+                    </div>
+                    <div class="content_img_empresa" style="align-items: center;">
+                    <div class="imgTop circle_icon" style="margin:0;">
+                            <span class="material-symbols-outlined">license</span>
+                        </div>
+                        <h2 style="border: none;margin-bottom: 0;font-size: 1.4rem;" data-text="English Kids" id="text_dynamic">Excelência</h2>
+                        <h4 style="font-size: 0.9rem;text-align: center;margin: 1rem;">Padrão de qualidade em todo o processo educacional, da metodologia à certificação.</h4>
+                    </div>
+                    <div class="content_img_empresa" style="align-items: center;">
+                    <div class="imgTop circle_icon" style="margin:0;">
+                            <span class="material-symbols-outlined">lightbulb_2</span>
+                        </div>
+                        <h2 style="border: none;margin-bottom: 0;font-size: 1.4rem;" data-text="English Kids" id="text_dynamic">Inovação</h2>
+                        <h4 style="font-size: 0.9rem;text-align: center;margin: 1rem;">Métodos modernos de ensino que combinam teoria e prática de forma eficiente.</h4>
+                    </div>
+                    <div class="content_img_empresa" style="align-items: center;width: 100%;margin-top: 4rem;">
+                        <h2 style="border: none;margin-bottom: 0;font-size: 1.2rem;font-weight: 400;color: #8c8c8c;text-align: center;" data-text="English Kids" id="text_dynamic">A <strong style="color: #00fe00;font-weight: 800;">GUP</strong> é uma plataforma de educação profissionalizante comprometida em formar os melhores profissionais do mercado.</h2>
+                        <h4 style="font-size: 1rem;text-align: center;">Com metodologia moderna e professores experientes, oferecemos uma experiência de aprendizado completa que alia teoria e prática.</h4>
+                    </div>
+            </div>
+            <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;margin-bottom: 1rem;">
+                <strong style="color: aliceblue;font-size: 2rem;margin-top: 70px;font-weight: bolder;background: linear-gradient(135deg, #d1caff, #00ff22);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;">Nossos Profissionais</strong>
+                <div class="div-d"></div>
+            </div>
             <div class="content_empresas" style="margin: 0;">
                 <div class="content_img_empresa" style="min-width: 33vh;border: none;background: #00000087;justify-content: flex-start;justify-content: flex-start;flex-direction: column;">
-                   <div class="imgTop" style="margin:5vh;border-radius: 50%;">
-                        <img id="loadImgUser" src="img/celena.png" alt="" style="width:20vh;">
+                   <div class="imgTop" style="margin:1rem;border-radius: 50%;">
+                        <img id="loadImgUser" src="img/celena.png" alt="" style="width: 4rem;">
                     </div>
                     <h4 style="margin: 0;color: aliceblue;">CELENA GOMES</h4>
                         <p style="font-family: Goldman, sans-serif;margin:0;border: none;background: transparent;color: aliceblue;font-size: 2vh;padding-top: 0;">PEDAGOGA</p>
                 </div>
 
                 <div class="content_img_empresa" style="min-width: 33vh;border: none;background: #00000087;justify-content: flex-start;justify-content: flex-start;flex-direction: column;">
-                   <div class="imgTop" style="margin:5vh;border-radius: 50%;">
-                        <img id="loadImgUser" src="img/bruno.png" alt="" style="width:20vh;">
+                   <div class="imgTop" style="margin:1rem;border-radius: 50%;">
+                        <img id="loadImgUser" src="img/bruno.png" alt="" style="width: 4rem;">
                     </div>
                     <h4 style="margin: 0;color: aliceblue;">BRUNO MATOS</h4>
                         <p style="font-family: Goldman, sans-serif;margin:0;border: none;background: transparent;color: aliceblue;font-size: 2vh;padding-top: 0;">DIRETOR</p>
                 </div>
 
                 <div class="content_img_empresa" style="min-width: 33vh;border: none;background: #00000087;justify-content: flex-start;justify-content: flex-start;flex-direction: column;">
-                   <div class="imgTop" style="margin:5vh;border-radius: 50%;">
-                        <img id="loadImgUser" src="img/adriele.png" alt="" style="width:20vh;">
+                   <div class="imgTop" style="margin:1rem;border-radius: 50%;">
+                        <img id="loadImgUser" src="img/adriele.png" alt="" style="width: 4rem;">
                     </div>
                     <h4 style="margin: 0;color: aliceblue;">ADRIELE FERREIRA</h4>
                         <p style="font-family: Goldman, sans-serif;margin:0;border: none;background: transparent;color: aliceblue;font-size: 2vh;padding-top: 0;">GERENTE COMERCIAL</p>
                 </div>
 
                 <div class="content_img_empresa" style="min-width: 33vh;border: none;background: #00000087;justify-content: flex-start;justify-content: flex-start;flex-direction: column;">
-                   <div class="imgTop" style="margin:5vh;border-radius: 50%;">
-                        <img id="loadImgUser" src="img/edson.png" alt="" style="width:20vh;">
+                   <div class="imgTop" style="margin:1rem;border-radius: 50%;">
+                        <img id="loadImgUser" src="img/edson.png" alt="" style="width: 4rem;">
                     </div>
                     <h4 style="margin: 0;color: aliceblue;">EDSON JUNIOR</h4>
                         <p style="font-family: Goldman, sans-serif;margin:0;border: none;background: transparent;color: aliceblue;font-size: 2vh;padding-top: 0;">INSTRUTOR</p>
                 </div>
 
                 <div class="content_img_empresa" style="min-width: 33vh;border: none;background: #00000087;justify-content: flex-start;justify-content: flex-start;flex-direction: column;">
-                   <div class="imgTop" style="margin:5vh;border-radius: 50%;">
-                        <img id="loadImgUser" src="img/josue.jpg" alt="" style="width:20vh;">
+                   <div class="imgTop" style="margin:1rem;border-radius: 50%;">
+                        <img id="loadImgUser" src="img/josue.jpg" alt="" style="width: 4rem;">
                     </div>
                     <h4 style="margin: 0;color: aliceblue;">JOSUÉ LEANDRO</h4>
                         <p style="font-family: Goldman, sans-serif;margin:0;border: none;background: transparent;color: aliceblue;font-size: 2vh;padding-top: 0;">ANALISTA DE DADOS</p>
@@ -585,7 +543,10 @@
         </section>
         <section id="contato">
         <div id="Contrate-me">
-            <strong style="display: flex;color: aliceblue;font-size: 3vh;font-weight: 200;width: -webkit-fill-available;justify-content: center;margin-bottom: 70px;font-family: Goldman, sans-serif;">Contatos</strong>
+            <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;margin-bottom: 2rem;">
+                <strong style="color: aliceblue;font-size: 2rem;margin-top: 70px;font-weight: bolder;background: linear-gradient(135deg, #d1caff, #00ff22);-webkit-background-clip: text;-webkit-text-fill-color: transparent;background-clip: text;">Contato</strong>
+                <div class="div-d"></div>
+            </div>
             <div class="ccc">
                 <a href="https://api.whatsapp.com/send?phone=559184271612" target="_blank"><span class="material-symbols-outlined">phone_iphone</span></a>
                 <strong  style="color: #686868;width: -webkit-fill-available;margin: 13px 7px;">Telefone: </strong>
@@ -605,6 +566,9 @@
                 <strong  style="color: #686868;width: -webkit-fill-available;margin: 13px 7px;">Localização: </strong>
                 <iframe style="width: -webkit-fill-available;height: fit-content;" class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8044445978067!2d-47.92848652615182!3d-1.2917028986960126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a5af0068344355%3A0xe0091c753e6eb0a6!2sGUP%20Educa%C3%A7%C3%A3o%20Inteligente!5e0!3m2!1spt-BR!2sbr!4v1754312012295!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+            </div>
+            <div style="width: 100%;display: flex;align-items: center;justify-content: center;border-top: 1px solid #5f5f5f47;">
+                <p style="font-size: 1rem;color: #686868;">© 2025 GUP - Educação Inteligente. Todos os direitos reservados.</p>
             </div>
         </div>
     </section>
