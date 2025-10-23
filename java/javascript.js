@@ -15,6 +15,7 @@ var btn_contact = document.getElementById('btn_contact');
 var bg_img = document.getElementById('bg_img');
 var content_curso = document.getElementById('content_curso');
 var list_english = document.getElementById('list_english');
+var msgUserError = document.getElementById('msgUserError');
 
 
 // Espera o conteúdo da página ser totalmente carregado
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cardWrapper = document.getElementById('list_prof');
     const carrocel = document.getElementById('carrocel');
 
-    // --- Nova função centralizada para controlar a visibilidade dos botões ---
+    // --- função centralizada para controlar a visibilidade dos botões ---
     function updateButtonVisibility() {
         const { scrollLeft, scrollWidth, clientWidth } = cardWrapper;
 
@@ -104,28 +105,28 @@ $('#btn_menu_close').click( function(){
 $('#btn-gup').click( function(){
     content_curso.style.display = "";
     hide_data();
-    btn_gup.style.display = '';
+    btn_gup.style.display = 'flex';
 })
 $('#btn-rc').click( function(){
     content_curso.style.display = "";
     hide_data();
-    btn_rc.style.display = '';
+    btn_rc.style.display = 'flex';
 })
 
 $('#btn-fisio').click( function(){
     content_curso.style.display = "";
     hide_data();
-    btn_fisio.style.display = '';
+    btn_fisio.style.display = 'flex';
 })
 $('#btn-optimize').click( function(){
     content_curso.style.display = "";
     hide_data();
-    btn_optimize.style.display = '';
+    btn_optimize.style.display = 'flex';
 })
 $('#btn-logistica').click( function(){
     content_curso.style.display = "";
     hide_data();
-    btn_logistica.style.display = '';
+    btn_logistica.style.display = 'flex';
 })
 $('#close_curso').click( function(){
     content_curso.style.display = "none";
@@ -178,7 +179,7 @@ function removeStyle() {
 const observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0 // ANTES: Provavelmente 0.4 ou 0.5. DEPOIS: 0.1 ou 0.05
+    threshold: 0.1 // ANTES: Provavelmente 0.4 ou 0.5. DEPOIS: 0.1 ou 0.05
 };
 
 // Se quiser que dispare assim que 1 pixel entrar na tela, você pode até usar 0.
@@ -281,25 +282,56 @@ const phoneMask = (value) => {
   return value
 }
 
-document.getElementById("celular").addEventListener("input", function(event){
-
-  //busca conteúdo do input
-    var celular = document.getElementById("celular").value;
-    var nome = document.getElementById("nome").value;
-
-    //valida conteudo do input 
-    if (celular !== null && conteudo !== '' && nome !== null && nome !== '') {
-      //habilita o botão
-      document.getElementById("cad_lead").disabled = false;
-    } else {
-      //desabilita o botão se o conteúdo do input ficar em branco
-      document.getElementById("cad_lead").disabled = true;
-    }
-});
-
 // window.addEventListener('scroll', function() {
 //   console.log(Math.round(window.scrollY));
 // });
 
+$('#cad_lead').click(function(){
+    var nome = $('#nome').val();
+    var cel = $('#celular').val();
+    var obs = $('#email').val();
+    var status = '7';
+    var canal = '8';
+    if(nome != null && nome != '' && cel != null && cel != '' ){
+    $.ajax({
+            url:'https://school.groupjl.com.br/php/insertLeadPortal.php',
+            type: 'POST',
+            data: {nome:nome, cel:cel, status:status, canal:canal, obs:obs},
+        }).done(function(resposta){
+            if(JSON.parse(resposta) == 1){
+                msgSucess();
+            }
+            if(JSON.parse(resposta) == 2){
+                msgInfo();
+            }
+        })
+    }else{
+        msgInfo();
+    }
+})
 
+function msgSucess(){
+    msgUserError.style.display = "";
+    msgUserError.style.animation = "notificar 0.9s forwards";
+    msgUserError.style.background = "#2be27dff";
+    $('#iconMsg').text('check');
+    $('#tipoMsgError').text('Seucesso!');
+    $('#msgTextError').text('Obrigado por informar seu contato!');
+    setTimeout(msgHide, 5000);
+}
+
+function msgInfo(){
+    msgUserError.style.display = "";
+    msgUserError.style.animation = "notificar 0.9s forwards";
+    msgUserError.style.background = "#ffffffff";
+    $('#iconMsg').text('report');
+    $('#tipoMsgError').text('Informativo!');
+    $('#msgTextError').text('Preencha seu nome e contato, por favor');
+    setTimeout(msgHide, 5000);
+}
+
+
+function msgHide(){
+    msgUserError.style.animation = "c_notificar 0.9s forwards";
+}
 
