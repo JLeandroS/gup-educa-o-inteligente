@@ -1,6 +1,7 @@
 var btn_menu = document.getElementById('btn_menu');
 var btn_menu_close = document.getElementById('btn_menu_close');
 var menu_modal = document.getElementById('menu_modal');
+let chatIA = document.getElementById('chatIA');
 
 var btn_gup = document.getElementById('data_gup');
 var btn_fisio = document.getElementById('data_fisio');
@@ -334,4 +335,12 @@ function msgInfo(){
 function msgHide(){
     msgUserError.style.animation = "c_notificar 0.9s forwards";
 }
+setTimeout(showMsgIA, 10000)
 
+$('#closeChat').click(function(){
+    chatIA.style.display = "none";
+})
+
+function showMsgIA(){
+    chatIA.style.display = "";
+}
