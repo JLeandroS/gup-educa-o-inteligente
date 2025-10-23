@@ -139,7 +139,7 @@ body{
     opacity: 0;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     border: 2px solid #8a64ff7a;
-
+    height: auto;
 }
 
 /* Classe que torna os botões visíveis */
@@ -1026,3 +1026,4 @@ a{
     box-shadow: 0 0 20px 0px #67f448ad;
     background:#24411e;
 }
+
