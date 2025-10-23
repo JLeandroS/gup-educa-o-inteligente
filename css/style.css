@@ -1,11 +1,38 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: Roboto, sans-serif;
     width:100%;
+    background: black;
 }
 .menu{
     display:flex;
+}
+.showCurso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.msgUser {
+    position: fixed;
+    top: 78px;
+    right: 11px;
+    display: flex;
+    width: auto;
+    background: #028200;
+    z-index: 202;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.26);
+    transition: all 0.9s ease-in-out;
+    font-size: larger;
+    border-radius: 6px;
+    flex-direction: column;
+    align-items: center;
+}
+.msg_dados {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .statusJob{
     position: absolute;
@@ -13,29 +40,48 @@ body{
     display: flex;
     align-items: center;
     border-radius: 20px;
-    background: #ffffff;
+    background: #4bff00;
     padding: 5px;
     padding-right: 12px;
     color: #2c2845;
-    font-size: 12px;
+    font-size: 1rem;
     z-index: 2;
+}
+.events-content{
+    margin: 1rem;
+    padding: 1rem;
+    color: #ffffff;
+}
+.top-events{
+    background: linear-gradient(135deg, #060606, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 .sub_text{
     font-size: 5.5vh;
 }
 .ball{
     position: absolute;
-    border-radius: 68px;
+    border-radius: 37px;
     background: #ffffff;
-    width: 130vh;
-    height: 54px;
+    width: 28vh;
+    height: 28vh;
     z-index: 1;
-    opacity: 0.2;
-    transform: rotate(150deg);
+    opacity: 0.1;
     z-index: 0;
+    transition: all 0.4s ease-in-out;
+    animation-name: shak;
+    animation-duration: 2s;
+    transform: rotate(45deg);
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
 }
 .line_horizontal{
-    border: 0.3vh solid #ffffff;
+    border: 0.3vh solid #4bff00;
     width: 64vw;
     position: relative;
     display: flex;
@@ -43,6 +89,7 @@ body{
     margin-top: 3vh;
     margin-bottom: -4vh;
     max-width: 100%;
+    box-shadow: 0 0 19px 0 #4bff00;
 }
 .content_form{
     width: 100%;
@@ -53,16 +100,19 @@ body{
 .form{
     display: flex;
     flex-direction: column;
-    padding: 1vw;
+    padding: 1rem;
     margin: 2vw;
-    background: #191d3975;
+    margin-top: 0;
+    background: #121212;
     border-radius: 20px;
     width: 50%;
     color: aliceblue;
     backdrop-filter: blur(3px);
+    border: 2px solid #404040;
 }
+
 .form input{
-    border: 2px solid #ffffff73;
+    border: 2px solid #404040;
     padding: 10px;
     border-radius: 20px;
     background: transparent;
@@ -106,7 +156,7 @@ body{
     padding: 4px;
 }
 .form button{
-    margin-top: 40px;
+    margin-top: 35px;
     border: none;
     padding: 12px;
     border-radius: 20px;
@@ -117,6 +167,7 @@ body{
     font-weight: bold;
     background: #4ab7eb;
     align-items: center;
+    font-size: large;
 }
 .form button:hover{
     background: #e9f3ff;
@@ -173,15 +224,16 @@ button{
     font-family: 'Roboto', sans-serif;
 }
 .imgTop {
-    width: 20vh;
-    min-width: 20vh;
-    height: 20vh;
+    width: 4rem;
+    min-width: 4rem;
+    height: 4rem;
     display: flex;
     align-items: center;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 20px;
     justify-content: center;
-    margin: 5px;
+    background: #7b85ff;
+    box-shadow: 6px 6px 7px 0 #0000009e;
 }
 .material-symbols-outlined {
     border-radius: 50%;
@@ -211,29 +263,42 @@ button{
 }
 .content_img_empresa{
     display: flex;
-    margin: 10px;
-    flex-direction: row;
-    align-items: center;
-    color: #c4c4c4;
+    flex-direction: column;
+    margin: 1rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #ffffff;
     position: relative;
-    border: 2px solid #ffffff;
+    border: 2px solid #404040;
     border-radius: 15px;
-    width: 104vh;
-    min-width: 67vh;
-    max-width: 67vw;
-    justify-content: space-around;
-    background: linear-gradient(45deg, black, transparent);
+    width: calc(50vw - 2.8rem);
+    min-width: calc(50vw - 2.8rem);
+    max-width: 100%;
+    background: #121212;
     min-height: 31vh;
+    padding: 1rem;
+    transition: all 0.8s ease-in-out;
 }
 .content_img_empresa p{
     padding: 1.2vh 4vh;
-    border-radius: 5px;
-    margin: 1vh;
+    border-radius: 20px;
     font-size: 1.4vh;
-    margin-bottom: 4vh;
-    background: #ededed;
+    background: #62ff00;
+    width: 100%;
     color: black;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content_img_empresa h4{
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 0.8rem;
+    color: #8e8e8e;
+}
+.content_img_empresa h2{
+    margin-bottom:0 ;
 }
 .statusJob p{
     border:none;
@@ -249,20 +314,25 @@ button{
     color: #ffffff;
     scale: 1.02;
     cursor: pointer;
-    border-color: #5f7fff;
-    background: #000000cf;
+    border-color: #90ff28;
+    box-shadow: 0 0 20px 0 #000000;
+    transform: translateY(-10px);
 }
 .content_curso{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
+}
+.content_curso h2{
+    margin: 0;
+    margin-top: 1rem;
 }
 .content_empresas{
     display: flex;
     overflow: auto;
     align-items: center;
     max-width: 100%;
-    height: 50vh;
     position: relative;
     scroll-behavior: smooth; /* Animação suave do scroll */
     /* Para esconder a barra de rolagem no Chrome, Safari e Opera */
@@ -301,7 +371,7 @@ a{
 #btn_menu{
     padding: 9px;
     color: white; 
-    font-size: 34px;
+    font-size: 1.7rem;
     display: none;
     margin: 9px;
 }
@@ -313,7 +383,7 @@ a{
 #btn_menu_close{
     padding: 9px;
     color: white; 
-    font-size: 34px;
+    font-size: 1.7rem;
     margin: 9px;
 }
 #btn_menu_close:hover{
@@ -346,7 +416,7 @@ a{
 }
 .content{
     height: auto;
-    background:repeating-linear-gradient(90deg, #000000, rgb(48 48 57) 100%);
+    background:repeating-linear-gradient(90deg, #0a0a0a, #0a0a0a, #0a0a0a, rgb(24 24 24 / 62%), #0a0a0a, #0a0a0a, #0a0a0a 100%);
     overflow: hidden;
     scroll-behavior: smooth;
 }
@@ -361,6 +431,7 @@ a{
     flex-direction: column;
     margin: 25px;
     align-items: center;
+    z-index: 2;
 }
 #inicio{
     transition: all 0.3s ease-in-out;
@@ -546,15 +617,15 @@ a{
 .bg_img {
     background-repeat: no-repeat;
     background-position-x: center;
-    background-size: cover;
+    background-size: contain;
     border-radius: 25% 0% 0% 25%;
-    width: 75vh;
+    width: 100vw;
     height: 100vh;
     opacity: 0.2; /* Opacidade final da animação */
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 0;
+    z-index: -1;
 }
 .map{
     border: 0;
@@ -574,6 +645,9 @@ a{
     padding: 0;
     align-items: center;
     z-index: 10;
+}
+.direction{
+    flex-direction: row;
 }
 .close:hover{
     background: #858484;
@@ -625,7 +699,7 @@ a{
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
   }
 }
-@media (max-width:800px) {
+@media (max-width:830px) {
     .card_in{
         margin: 2vh;
     }
@@ -665,7 +739,6 @@ a{
         flex-direction: column;
         min-width: 35vh;
         padding-top: 5vh;
-        min-height: 50vh;
     }
     .content_empresas {
         height: 79vh;
@@ -676,6 +749,32 @@ a{
     .sub_text{
         font-size: 3.5vh;
     }
+    .ball{
+        width: 26vh;
+        height: 26vh;
+    }
+    .direction{
+    flex-direction: column;
+    }
+
+}
+@media (max-width:650px) {
+    .card-metricas{
+        width: 100%;
+    }
+    .carrocel .content_img_empresa{
+        width: 100%;
+    }
+    #list_prof .content_img_empresa{
+        width: 90vw;
+        min-width: 83vw;
+
+    }
+    #objetivos .content_img_empresa{
+        width: 90vw;
+        min-width: 83vw;
+
+    }
 }
 ::-webkit-scrollbar{
     width: 5px;
@@ -685,7 +784,7 @@ a{
     background-color: #000000; 
 }
 ::-webkit-scrollbar-thumb{
-    background-color: #ffffff;
+    background-color: #1bbe00;
     box-shadow: 0 0 2px 1px white;
     border-radius: 8px;
 }
@@ -701,4 +800,229 @@ a{
     height: 0px;
     background: transparent; /* Adicionado para garantir a ocultação em alguns casos */
 
+}
+@keyframes notificar {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes c_notificar {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes shak {
+    0%{
+        transform: rotate(45deg);
+    }
+    40%{
+        transform: translateX(50%);
+    }50%{
+        transform: rotate(0deg);
+        opacity: 0.2;
+        color: #ffffff;
+        z-index: 10;
+        font-weight: bold;
+    }
+    100%{
+        transform: rotate(45deg);
+    }
+}
+
+@media (min-width: 768px) {
+    .md\:text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-align: center;
+    }
+}
+.text-muted-foreground {
+    color: #9b9b9b;
+}
+
+:root{
+    --shadow:  0 0 10px 0 hsl(109 93% 48%);
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mb-12 {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.max-w-2xl {
+    max-width: 42rem;
+    font-size: 1.2rem;
+}
+
+* {
+    border-color: hsl(var(--border));
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+
+.btn-folow{
+    border-radius: 20px;
+    padding: 0.7rem 2rem;
+    font-size: 1.1rem;
+    background: linear-gradient(90deg, hsl(109 93% 38%), hsl(109 93% 48%));
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    border: 0.1rem solid hsl(109 93% 38%);
+    margin: 1rem;
+    min-width: 244px;
+    justify-content: space-evenly;
+}
+
+.transition{
+    transition: all 0.3s ease-in-out;
+}
+.btn-folow-two{
+        background: transparent;
+        color: aliceblue;
+}
+.btn-folow:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow);
+}
+
+.btn-folow-two:hover{
+        background: transparent;
+        color: aliceblue;
+        background: linear-gradient(90deg, hsl(109, 100%, 53%), hsl(109 93% 48%));
+        color: #000000;
+}
+
+.balao_wpp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: #78c932;
+    color: #000000;
+    position: fixed;
+    bottom: 1.7rem;
+    right: 1.7rem;
+    z-index: 10;
+    box-shadow: 0 0 13px 0px #78c932;
+    transition: all 0.3s ease-in-out;
+    animation: shake 0.3s infinite linear;
+}
+.balao_wpp .material-symbols-outlined{
+    font-size: 1.8rem;
+}
+.balao_wpp:hover{
+    box-shadow: 0 0 13px 4px #78c932;
+}
+
+@keyframes shake{
+    0%{
+        transform: translateY(0);
+    }50%{
+        transform: translateY(0.7rem);
+    }100%{
+        transform: translateY(0);
+    }
+}
+
+.content-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+.card-metricas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    border-radius: 20px;
+    border: 0.15rem solid #3f3f3f;
+    padding: 1.2rem;
+    min-width: 11rem;
+    background:#0000001a;
+    box-shadow: 6px 5px 20px 0 #000000;
+    transition: all 0.3s ease-in-out;
+}
+.card-metricas h2{
+    color: #69f849;
+    font-size: 2.2rem;
+    margin: 0;
+    font-weight: 700;
+}
+.card-metricas p{
+    color:#868686;
+    margin-bottom: 0;
+    margin-top: 1rem;
+}
+.div-d{
+    border: 3px solid #69f849;
+    box-shadow: 0 0 7px 0 #0DEF7C;
+    width: 15rem;
+    max-width: 100%;
+    margin-top: 0.5rem;
+}
+
+.card-metricas:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px 0px #69f84985;
+    border: 0.15rem solid #69f849;
+}
+.hoverCardTwo:hover{
+    box-shadow: 0 0 20px 0px #a892f785;
+    border: 0.15rem solid #a892f7;
+}
+.hoverCardThree:hover{
+    box-shadow: 0 0 20px 0px #40c5f283;
+    border: 0.15rem solid #40c5f2;
+}
+
+.imgTop .material-symbols-outlined{
+    margin: 0;
+    font-size: 2rem;
+}
+.align-simple{
+    display: flex;
+    align-items: center;
+    margin: 0.4rem 0;
+}
+.align-simple .material-symbols-outlined{
+    margin: 0;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.circle_icon{
+    border-radius: 50%;
+    background: #1c2a18;
+    color: #67f448;
+    width: 5rem;
+    min-width: 5rem;
+    height: 5rem;
+    box-shadow: 0 0;
+}
+.circle_icon:hover{
+    box-shadow: 0 0 20px 0px #67f448ad;
+    background:#24411e;
 }
