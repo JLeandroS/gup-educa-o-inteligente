@@ -330,6 +330,9 @@ button{
 .content_img_empresa:hover p .material-symbols-outlined{
     transform: translateX(10px);
 }
+.content_img_empresa:hover h2{
+    color: #caff5d;
+}
 .content_curso{
     display: flex;
     flex-direction: column;
@@ -339,9 +342,6 @@ button{
 .content_curso h2{
     margin: 0;
     margin-top: 1rem;
-}
-.content_img_empresa:hover h2{
-    color: #caff5d;
 }
 .content_empresas{
     display: flex;
@@ -1133,11 +1133,11 @@ a{
     background: rgb(33 32 32);
     border-radius: 20px;
     height: 100%;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding: 0px 10px;
     color: rgb(255 255 255);
-    text-shadow: rgb(131, 255, 0) 0px 0px 4px;
-    height: 1.9rem;
+    text-shadow: rgb(105 105 105) 0px 0px 4px;
+    height: 1.5rem;
     outline: none;
 }
 .content_input .material-symbols-outlined{
@@ -1146,7 +1146,7 @@ a{
     margin: 0px;
     margin-left: 5px;
     border-radius: 50%;
-    padding: 0.2rem;
+    padding: 0.4rem;
     background: #ffffff;
 }
 .content_input .material-symbols-outlined:hover{
@@ -1188,5 +1188,3 @@ a{
     position: relative;
     display: inline-block;
 }
-
-
