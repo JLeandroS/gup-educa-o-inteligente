@@ -108,15 +108,20 @@
     animation: lightLogo 0.9s ease-in-out;
 }
 @keyframes lightLogo {
-    0% { /* Equivalente a 0% */
-        filter: drop-shadow(0px 0px 15px #00fe00);
-    }
-    50% { /* Equivalente a 100% */
-        filter: drop-shadow(0px 0px 20px #00fe00) drop-shadow(0px 0px 10px #ffffff);
-    }
-       100% { /* Equivalente a 100% */
-        filter: drop-shadow(0px 0px 0px #00fe00);
-    }
+  0% {
+    /* Prefixo para Safari e navegadores WebKit */
+    -webkit-filter: drop-shadow(0px 0px 15px #00fe00); 
+    /* Padrão */
+    filter: drop-shadow(0px 0px 15px #00fe00);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0px 0px 20px #00fe00) drop-shadow(0px 0px 10px #ffffff);
+    filter: drop-shadow(0px 0px 20px #00fe00) drop-shadow(0px 0px 10px #ffffff);
+  }
+  100% {
+    -webkit-filter: drop-shadow(0px 0px 0px #00fe00);
+    filter: drop-shadow(0px 0px 0px #00fe00);
+  }
 }
 </style>
 <body>
@@ -556,3 +561,4 @@
     <script src="java/javascript.js"></script>
 </body>
 </html>
+
