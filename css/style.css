@@ -1107,7 +1107,7 @@ a{
     text-align: justify;
     font-family: Roboto, sans-serif;
     border-radius: 3px 10px 10px 10px;
-    background: #22243b;
+    background: #474747;
     color: aliceblue;
     padding: 12px;
     margin: 0 19px 2px 2px;
@@ -1188,3 +1188,4 @@ a{
     position: relative;
     display: inline-block;
 }
+
