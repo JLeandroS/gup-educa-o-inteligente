@@ -1121,7 +1121,7 @@ a{
     padding: 0px 10px;
     color: rgb(255 255 255);
     text-shadow: rgb(131, 255, 0) 0px 0px 4px;
-    height: 2rem;
+    height: 1.9rem;
     outline: none;
 }
 .content_input .material-symbols-outlined{
@@ -1157,6 +1157,7 @@ a{
         width: calc(100% - 2rem);
     }
 }
+
 
 
 
