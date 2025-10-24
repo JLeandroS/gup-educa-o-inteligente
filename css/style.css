@@ -280,6 +280,7 @@ button{
     min-height: 31vh;
     padding: 1rem;
     transition: all 0.8s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .content_img_empresa p{
     padding: 1.2vh 4vh;
@@ -292,6 +293,7 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.2s ease-in-out;
 }
 .content_img_empresa h4{
     font-size: 0.8rem;
@@ -319,6 +321,15 @@ button{
     border-color: #90ff28;
     box-shadow: 0 0 20px 0 #000000;
     transform: translateY(-10px);
+}
+.content_img_empresa:hover .imgTop{
+    background: #40f772;
+    box-shadow: 0px 0px 20px 0 #00f74394;
+    transform: scale(1.1);
+    color: brown;
+}
+.content_img_empresa:hover p .material-symbols-outlined{
+    transform: translateX(10px);
 }
 .content_curso{
     display: flex;
@@ -1164,14 +1175,7 @@ a{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
