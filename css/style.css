@@ -1124,12 +1124,12 @@ a{
     outline: none;
 }
 .content_input .material-symbols-outlined{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: rgb(33 32 32);
     margin: 0px;
     margin-left: 5px;
     border-radius: 50%;
-    padding: 0.4rem;
+    padding: 0.2rem;
     background: blueviolet;
 }
 .btn-close{
@@ -1156,6 +1156,7 @@ a{
         width: calc(100% - 2rem);
     }
 }
+
 
 
 
