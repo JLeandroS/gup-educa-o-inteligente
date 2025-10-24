@@ -340,6 +340,9 @@ button{
     margin: 0;
     margin-top: 1rem;
 }
+.content_img_empresa:hover .content_curso h2{
+    color: #caff5d;
+}
 .content_empresas{
     display: flex;
     overflow: auto;
@@ -1185,3 +1188,4 @@ a{
     position: relative;
     display: inline-block;
 }
+
