@@ -1101,6 +1101,7 @@ a{
     display: flex;
     max-width: 100%;
     overflow: hidden;
+    margin-top: 2px;
 }
 .card_msg p{
     max-width: 100%;
@@ -1188,4 +1189,5 @@ a{
     position: relative;
     display: inline-block;
 }
+
 
