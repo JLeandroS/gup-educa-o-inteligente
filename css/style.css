@@ -366,6 +366,7 @@ button{
 }
 a{
     text-decoration: none;
+    color: unset;
 }
 .btn_top{
     border: none;
@@ -1179,3 +1180,4 @@ a{
     position: relative;
     display: inline-block;
 }
+
