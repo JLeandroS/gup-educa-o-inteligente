@@ -302,6 +302,7 @@ button{
 }
 .content_img_empresa h2{
     margin-bottom:0 ;
+    font-size: 1.2rem;
 }
 .statusJob p{
     border:none;
@@ -1192,3 +1193,4 @@ a{
     position: relative;
     display: inline-block;
 }
+
