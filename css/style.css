@@ -327,6 +327,9 @@ button{
     transform: scale(1.1);
     color: brown;
 }
+.content_img_empresa p .material-symbols-outlined{
+    transition: all 0.2s ease-in-out;
+}
 .content_img_empresa:hover p .material-symbols-outlined{
     transform: translateX(10px);
 }
@@ -1189,5 +1192,3 @@ a{
     position: relative;
     display: inline-block;
 }
-
-
