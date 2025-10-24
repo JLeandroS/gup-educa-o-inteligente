@@ -266,15 +266,15 @@ button{
     display: flex;
     flex-direction: column;
     margin: 1rem;
-    margin-right: 1.1rem;
+    margin-right: 1.2rem;
     align-items: flex-start;
     justify-content: flex-start;
     color: #ffffff;
     position: relative;
     border: 2px solid #404040;
     border-radius: 15px;
-    width: calc(50vw - 2.8rem);
-    min-width: calc(50vw - 2.8rem);
+    width: calc(50vw - 2.99rem);
+    min-width: calc(50vw - 2.99rem);
     max-width: 100%;
     background: #121212;
     min-height: 31vh;
@@ -1162,6 +1162,7 @@ a{
         width: calc(100% - 2rem);
     }
 }
+
 
 
 
