@@ -1040,6 +1040,8 @@ a{
     overflow: hidden;
     transition: all 0.2s ease-in-out;
     animation: ample 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
 }
 .top_chat{
     display: flex;
@@ -1144,3 +1146,4 @@ a{
         width: calc(100% - 2rem);
     }
 }
+
