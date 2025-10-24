@@ -939,7 +939,7 @@ a{
     z-index: 10;
     box-shadow: 0 0 13px 0px #78c932;
     transition: all 0.3s ease-in-out;
-    animation: shake 0.3s infinite linear;
+    animation: shake 0.3s infinite ease-in-out;
 }
 .balao_wpp .material-symbols-outlined{
     font-size: 1.8rem;
@@ -1180,4 +1180,5 @@ a{
     position: relative;
     display: inline-block;
 }
+
 
