@@ -1135,7 +1135,7 @@ a{
 }
 .content_input .material-symbols-outlined:hover{
     background: rgb(75, 255, 75);
-    box-shadow: 0 0 0 0 rgb(75, 255, 75);
+    box-shadow: 0 0 20px 0 rgb(75, 255, 75);
     cursor: pointer;
 }
 .btn-close{
@@ -1162,6 +1162,7 @@ a{
         width: calc(100% - 2rem);
     }
 }
+
 
 
 
