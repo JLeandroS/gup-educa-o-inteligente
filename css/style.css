@@ -279,8 +279,7 @@ button{
     background: #121212;
     min-height: 31vh;
     padding: 1rem;
-    transition: all 0.8s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.8s ease-out;
 }
 .content_img_empresa p{
     padding: 1.2vh 4vh;
@@ -1180,5 +1179,6 @@ a{
     position: relative;
     display: inline-block;
 }
+
 
 
