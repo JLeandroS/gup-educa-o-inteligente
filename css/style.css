@@ -1104,25 +1104,28 @@ a{
     align-items: center;
     padding: 0px;
     background: #212020;
-    border-radius: 20px;
+    border-radius: 37px;
     margin: 1rem;
+    padding: 0.4rem;
 }
 .content_input textarea{
     font-family: Roboto, sans-serif;
     width: 100%;
     resize: none;
-    background: #212020;
+    background: rgb(33 32 32);
     border-radius: 20px;
     height: 100%;
-    font-size: 1rem;
-    padding: 0 10px 0px 10px;
-    color: #83ff00;
-    text-shadow: 0 0 4px #83ff00;
+    font-size: 1.4rem;
+    padding: 0px 10px;
+    color: rgb(255 255 255);
+    text-shadow: rgb(131, 255, 0) 0px 0px 4px;
+    height: 2rem;
 }
 .content_input .material-symbols-outlined{
     font-size: 2rem;
     color: rgb(33 32 32);
     margin: 0px;
+    margin-left: 5px;
     border-radius: 50%;
     padding: 0.4rem;
     background: blueviolet;
@@ -1151,6 +1154,7 @@ a{
         width: calc(100% - 2rem);
     }
 }
+
 
 
 
