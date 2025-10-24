@@ -266,6 +266,7 @@ button{
     display: flex;
     flex-direction: column;
     margin: 1rem;
+    margin-right: 1.1rem;
     align-items: flex-start;
     justify-content: flex-start;
     color: #ffffff;
@@ -1156,6 +1157,7 @@ a{
         width: calc(100% - 2rem);
     }
 }
+
 
 
 
